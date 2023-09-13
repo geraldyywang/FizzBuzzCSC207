@@ -9,6 +9,19 @@ public class Reduce {
         System.out.println(c);
     }
 
+    public static int main(int n) {
+        int c = 0; // counts number of steps
+        while (n > 0) {
+            n = reduce(n);
+            ++c;
+        }
+        return c;
+    }
+
+    public static int main() {
+        return main(100);
+    }
+
     private static int reduce(int n) {
         // if odd
         if (n % 2 == 1) {
